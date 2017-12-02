@@ -680,6 +680,7 @@ max-width:55%;
 /* 7. PAGES LAYOUT GENERAL */
 /*===============================================*/	
 .homepage{
+background-image: url("sampul.jpg");
 background-color:#1d202d;
 }
 .homepagecontent{
