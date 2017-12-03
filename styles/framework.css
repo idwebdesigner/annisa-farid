@@ -2385,7 +2385,7 @@ p{color:#666666;}p strong{color:#1f1f1f;}a{color:#2980b9;}::-webkit-scrollbar{di
 /*---Snackbar---*/
 /*--------------*/
 
-.snackbar{position:fixed; bottom:0px; z-index:99999;}
+.snackbar{position:fixed; bottom:0px; z-index:999999;}
 .notification-bar{top:100px;}
 
 .snackbar p{
