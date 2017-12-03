@@ -3386,7 +3386,7 @@ p{color:#666666;}p strong{color:#1f1f1f;}a{color:#2980b9;}::-webkit-scrollbar{di
 	height:50px;
 	line-height:50px;
 	text-align:center;
-	z-index:12!important;
+	z-index:9999!important;
 }
 
 .cover-tag{
