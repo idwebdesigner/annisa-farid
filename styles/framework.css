@@ -2850,7 +2850,7 @@ p{color:#666666;}p strong{color:#1f1f1f;}a{color:#2980b9;}::-webkit-scrollbar{di
 }
 
 .page-login .page-login-field input::placeholder{color:#aaaaaa;}
-.page-login .page-login-links a{font-size:10px; color:#aaaaaa;}
+.page-login .page-login-links a{font-size:10px; margin-top:-10px; margin-bottom:-15px; color:#aaaaaa;}
 .page-login .forgot i{padding-left:5px;  display:none;}
 .page-login .create i{padding-right:10px; display:none;}
 
