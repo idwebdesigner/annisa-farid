@@ -1,103 +1,100 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
+
+<!-- Mirrored from www.enableds.com/products/appeca4/page-profile-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Dec 2017 22:24:13 GMT -->
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>HTML5 Geo Location API</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js&sensor=false"></script>
-
-
-    <style>
-        div.location {
-             width: 100%;
-             height: 400px;
-        }
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Epsilon X</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 </head>
 <body>
-    <div id="page">
-        <div class="location"></div>
-    </div>
-    <!-- [/page] -->
-    <script>
-
-        (function ( $ ) {
-            $.fn.GeoLocation = function( options ) {
-                var settings = $.extend({
-                    home: { latitude: 53.339381, longitude: -6.260533 },
-                }, options );
-
-                var home = new google.maps.LatLng(settings.home.latitude, settings.home.longitude);
-
-                return this.each(function() {
-                    var element = $(this);
-                    element.text('Attempting to find your location');
-
-                    function displayCurrentPosition(data) {
-                        element.html('<div class="map-canvas"></div>');
-
-                        var current = new google.maps.LatLng(data.coords.latitude, data.coords.longitude);
-
-                        var options = {
-                            center: current,
-                            mapTypeId: google.maps.MapTypeId.HYBRID,
-                            zoom: 10,
-                        };
-
-                        var map = new google.maps.Map(element[0], options);
-
-                        var directions = {
-                            origin: current,
-                            destination: home,
-                            travelMode: google.maps.DirectionsTravelMode.DRIVING
-                        };
-
-                        display = new google.maps.DirectionsRenderer({ map: map });
-
-                        service = new google.maps.DirectionsService();
-                        service.route(directions, function(response, status) {
-                            if (status == google.maps.DirectionsStatus.OK) {
-                                display.setDirections(response);
-                            }
-                            else
-                                alert ('failed to get directions');
-                        });
-                    }
-
-                    function onError(error) {
-                        switch(error.code) {
-                            case error.PERMISSION_DENIED:
-                                element.text('Access to location API denied by user');
-                                break;
-                            case error.POSITION_UNAVAILABLE:
-                                element.text('Unable to determine location');
-                                break;
-                            case error.TIMEOUT:
-                                element.text('Unable to determine location, the request timed out');
-                                break;
-                            case error.UNKNOWN_ERROR:
-                                element.text('An unknown error occurred!');
-                                break;
-                        }
-                    }
-
-                    if(navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(displayCurrentPosition, onError);
-                    } else {
-                        element.text('Geolocation is not supported by this browser, please upgrade to a more recent version');
-                    }
-                });
-
-            };
-
-        }( jQuery ));
-
-        jQuery(document).ready(function() {
-            jQuery('div.location').GeoLocation();
-        });
-
-    </script>
-
+<div id="page-transitions">
+<div id="menu-1" class="menu-wrapper menu-light menu-sidebar-left menu-large">
+<div class="menu-scroll">
+<div class="menu-socials">
+<a href="https://www.facebook.com/enabled.labs" class="font-12"><i class="fa facebook-color fa-facebook"></i></a>
+<a href="https://twitter.com/iEnabled" class="font-12"><i class="fa twitter-color fa-twitter"></i></a>
+<a href="https://plus.google.com/u/1/105775801838187143320" class="font-12"><i class="fa google-color fa-google-plus"></i></a>
+<a href="tel:+(1234)567890" class="font-13"><i class="fa color-green-dark fa-phone"></i></a>
+<a href="page-contact.html" class="font-13"><i class="fa color-blue2-light fa-envelope"></i></a>
+<a href="#" class="font-14 close-menu"><i class="fa color-red-dark fa-times"></i></a>
+</div>
+<a href="index.html" class="menu-logo"></a>
+<em class="menu-sub-logo">The Ultmate Mobile Solution</em>
+<div class="menu">
+<em class="menu-divider">Navigation<i class="fa fa-navicon"></i></em>
+<a class="menu-item" href="index-walkthrough.html"><i class="font-15 fa color-yellow-dark fa-star"></i><strong>Welcome</strong></a>
+<a class="menu-item" href="homepages.html"><i class="font-15 fa color-night-light fa-home"></i><strong>Homepages</strong></a>
+<a class="menu-item" href="features.html"><i class="font-15 fa color-blue-dark fa-cog"></i><strong>Components</strong></a>
+<a class="menu-item" href="menu.html"><i class="font-14 fa color-teal-dark fa-navicon"></i><strong>Navigations</strong></a>
+<a class="menu-item active-item" href="pages.html"><i class="font-13 fa color-green-dark fa-file"></i><strong>Site Pages</strong></a>
+<a class="menu-item" href="pageapps.html"><i class="font-14 fa color-orange-light fa-heart"></i><strong>App Styled</strong></a><a class="menu-item" href="walkthroughs.html"><i class="font-14 fa color-night-light fa-thumb-tack"></i><strong>Walkthroughs</strong></a>
+<a class="menu-item" href="media.html"><i class="font-14 fa color-brown-light fa-camera"></i><strong>Media</strong></a>
+<a class="menu-item" href="store.html"><i class="font-14 fa color-night-dark fa-shopping-bag"></i><strong>Store</strong></a>
+<a class="menu-item" href="news.html"><i class="font-15 fa color-magenta-light fa-newspaper-o"></i><strong>News</strong></a>
+<a class="menu-item" href="blog.html"><i class="font-14 fa color-black fa-edit"></i><strong>Blog</strong></a>
+<a class="menu-item no-border" href="page-contact.html"><i class="font-14 fa color-blue-dark fa-envelope"></i><strong>Contact</strong></a>
+<em class="menu-divider">Get Social<i class="fa fa-share-alt"></i></em>
+<a class="menu-item" data-submenu="sub-1" href="#"><i class="font-16 fa phone-color fa-phone-square"></i><strong>Call Us</strong></a>
+<div id="sub-1" class="submenu-item">
+<a href="tel:+1 234 567 890">Office</a>
+<a href="tel:+2 234 567 890">Business</a>
+<a href="tel:+3 234 567 890">Executives</a>
+</div>
+<a class="menu-item" href="#"><i class="font-17 fa facebook-color fa-facebook-square"></i><strong>Facebook</strong></a>
+<a class="menu-item" href="#"><i class="font-17 fa twitter-color fa-twitter-square"></i><strong>Twitter</strong></a>
+<a class="menu-item no-border" href="#"><i class="font-17 fa google-color fa-google-plus-square"></i><strong>Google +</strong></a>
+<em class="menu-divider">All rights reserved, Enabled <span class="copyright-year"></span><i class="fa fa-copyright"></i></em>
+<a class="menu-item close-menu" href="#"><i class="font-14 fa color-orange-dark fa-times"></i><strong>Close</strong></a>
+</div>
+</div>
+</div>
+<div id="page-content" class="page-content page-content-gray">
+<div id="page-content-scroll">
+<div class="profile-1">
+<div class="profile-header">
+<a href="#" class="profile-1-menu menu-icon hamburger-animated" data-deploy-menu="menu-1"></a>
+<iframe
+  width="100%"
+  height="100%"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyArniabD4CxGmJrCXjkpRjU2sQMzOc2i1I&q=-7.457437,110.225304" allowfullscreen>
+</iframe>
+</div>
+<div class="profile-header-clear"></div>
+<div class="profile-body">
+<a href="#" class="profile-button button box-shadow button-s button-round bold button-green button-center">Follow</a>
+<h1 class="profile-heading">Karla Black</h1>
+<h2 class="profile-sub-heading">Model for PixaBay</h2>
+<div class="profile-stats">
+<a href="#"><i class="fa center-text facebook-color fa-facebook"></i>34k</a>
+<a href="#"><i class="fa center-text twitter-color fa-twitter"></i>134k</a>
+<a href="#"><i class="fa center-text color-orange-dark fa-google-plus"></i>138k</a>
+<div class="clear"></div>
+</div>
+<div class="profile-gallery">
+<a class="show-gallery" href="images/pictures/1t.jpg" alt="img"><img class="preload-image responsive-image polaroid-effect polaroid-effect-small" src="images/empty.png" data-src="images/pictures/1s.jpg"></a>
+<a class="show-gallery" href="images/pictures/2t.jpg" alt="img"><img class="preload-image responsive-image polaroid-effect polaroid-effect-small" src="images/empty.png" data-src="images/pictures/2s.jpg"></a>
+<a class="show-gallery" href="images/pictures/3t.jpg" alt="img"><img class="preload-image responsive-image polaroid-effect polaroid-effect-small" src="images/empty.png" data-src="images/pictures/3s.jpg"></a>
+<a class="show-gallery" href="images/pictures/4t.jpg" alt="img"><img class="preload-image responsive-image polaroid-effect polaroid-effect-small" src="images/empty.png" data-src="images/pictures/4s.jpg"></a>
+<a class="show-gallery" href="images/pictures/5t.jpg" alt="img"><img class="preload-image responsive-image polaroid-effect polaroid-effect-small" src="images/empty.png" data-src="images/pictures/5s.jpg"></a>
+<a class="show-gallery" href="images/pictures/6t.jpg" alt="img"><img class="preload-image responsive-image polaroid-effect polaroid-effect-small" src="images/empty.png" data-src="images/pictures/6s.jpg"></a>
+<a class="show-gallery" href="images/pictures/7t.jpg" alt="img"><img class="preload-image responsive-image polaroid-effect polaroid-effect-small" src="images/empty.png" data-src="images/pictures/7s.jpg"></a>
+<a class="show-gallery" href="images/pictures/8t.jpg" alt="img"><img class="preload-image responsive-image polaroid-effect polaroid-effect-small" src="images/empty.png" data-src="images/pictures/8s.jpg"></a>
+<a class="show-gallery" href="images/pictures/9t.jpg" alt="img"><img class="preload-image responsive-image polaroid-effect polaroid-effect-small" src="images/empty.png" data-src="images/pictures/9s.jpg"></a>
+<div class="clear"></div>
+</div>
+<div class="decoration half-top"></div>
+</div>
+</div>
+</div>
+</div>
+<a href="#" class="back-to-top-badge back-to-top-small"><i class="fa fa-angle-up"></i>Back to Top</a>
+</div>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
 </body>
-</html>
