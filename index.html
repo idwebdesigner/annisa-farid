@@ -54,6 +54,15 @@
 <div class="decoration deco-3 opacity-10 half-top"></div>
 </div>
 <a data-deploy-menu="menu-modal" href="#" class="button button-mint button-xs button-center button-rounded uppercase ultrabold">Coming Soon</a>
+
+<button id="goFS">Go fullscreen</button>
+<script>
+  var goFS = document.getElementById("goFS");
+  goFS.addEventListener("click", function() {
+      document.body.requestFullscreen();
+  }, false);
+</script>
+
 <span class="smaller-text center-text color-white opacity-50 full-top">Copyright &copy; 2017 Annisa Nur Fitriyani</span>
 <span style="margin-top: -15px;" class="smaller-text center-text color-white opacity-50">annisa@designer.web.id</span>
 </div>
