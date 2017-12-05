@@ -1,5 +1,5 @@
 {
-  "name": "Web Application Manifest Sample",
+  "name": "My Wedding",
   "icons": [
     {
       "src": "13.png",
@@ -40,5 +40,5 @@
   ],
   "start_url": "index.html",
   "display": "standalone",
-  "orientation": "landscape"
+  "orientation": "portrait"
 }
