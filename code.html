@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-    <link rel="stylesheet" type="text/css" href="scripts/addtohomescreen.css">
-
-<script src="scripts/addtohomescreen.min.js"></script>
-    <script>
-addToHomescreen();
-</script>
-</head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<h2>Send e-mail to someone@example.com:</h2>
 
-<script>
-addToHomescreen();
-</script>
+<form action="mailto:defaultride.bruno@gmail.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
 
 </body>
 </html>
