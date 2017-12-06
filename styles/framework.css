@@ -1715,7 +1715,7 @@ p{color:#666666;}p strong{color:#1f1f1f;}a{color:#2980b9;}::-webkit-scrollbar{di
 .menu-contact .menu-contact-title i{
 	font-size:16px;
 	padding-bottom:15px;
-	padding-top:15px;
+	padding-top:0px;
 	display:block;
 	text-align:Center;
 	font-size:24px;
