@@ -3072,7 +3072,7 @@ p{color:#666666;}p strong{color:#1f1f1f;}a{color:#2980b9;}::-webkit-scrollbar{di
 	z-index:1;
 }
 
-.profile-header-clear{height:450px; pointer-events: none;}
+.profile-header-clear{height:350px; pointer-events: none;}
 .profile-1 .profile-body{
 	position:relative;
 	border-radius:5px;
